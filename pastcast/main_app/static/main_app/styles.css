@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222831;
+    color: #EEEEEE;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #31363F;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    color: #EEEEEE;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #EEEEEE;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+form {
+    margin-bottom: 20px;
+    border: 2px dashed #76ABAE;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #31363F;
+    cursor: pointer;
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form:hover {
+    background-color: #76ABAE;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#image-preview-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+button {
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+}
+
+button:hover {
+    background-color: #31363F;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.result-box {
+    width: 100%;
+    padding: 0;
+    background-color: #31363F;
+    border: 1px solid #76ABAE;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-wrap: break-word;
+    overflow-x: auto;
+}
+
+#response {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#response strong {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.4em;
+}
+
+#response em {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    form {
+        padding: 20px;
+        height: auto;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}

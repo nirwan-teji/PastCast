@@ -1,0 +1,33 @@
+<!-- filepath: /home/anubhav/Desktop/Skincare_project/face_analyzer_and_skincare_recommender/skincare_recommender/main_app/templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Analysis Result</strong></h1>
+        <div class="result-container">
+            <div class="result-box">
+                <h2><strong>Historical or Cultural Significance</strong></h2>
+                <div id="response">{{ response }}</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var responseElement = document.getElementById("response");
+            var responseText = responseElement.innerHTML;
+            responseText = responseText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            responseText = responseText.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            responseText = responseText.replace(/<strong>(.*?)<\/strong>/g, '<br><strong>$1</strong>');
+            responseText = responseText.replace(/<em>(.*?)<\/em>/g, '<br><em>$1</em>');
+            responseElement.innerHTML = responseText;
+        });
+    </script>
+</body>
+</html>
